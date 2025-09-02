@@ -1,13 +1,14 @@
-import Container from "./Container";
-
+import Logo from "./Nav/Logo";
+import Nav from "./Nav/Nav";
+import NavLinksList from "./Nav/NavLinksList";
 
 const Header = () => {
-
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md">
-      <Container>
-        Header
-      </Container>
+    <header>
+      <Nav>
+        <Logo />
+        <NavLinksList />
+      </Nav>
     </header>
   );
 };
