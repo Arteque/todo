@@ -1,18 +1,13 @@
 import { FaHome, FaSignInAlt, FaSignOutAlt, FaUserPlus } from "react-icons/fa";
 import NavLinkItem from "./NavLinkItem";
-const LinksList = [
-  { href: "/", label: "Home", icon: <FaHome /> },
-  { href: "/Login", label: "Login", icon: <FaSignInAlt /> },
-  { href: "/Logout", label: "Logout", icon: <FaSignOutAlt /> },
-  { href: "/Signup", label: "Signup", icon: <FaUserPlus /> },
-];
+const LinksList = [{ href: "/", label: "Home", icon: <FaHome /> }];
 
 const NavLinksList = () => {
   return (
     <>
       <ul>
-        {LinksList.map((link) => (
-          <li>
+        {LinksList.map((link, index) => (
+          <li key={index}>
             <NavLinkItem
               key={link.href}
               href={link.href}

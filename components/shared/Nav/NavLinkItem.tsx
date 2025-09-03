@@ -24,7 +24,9 @@ const NavLinkItem = ({
   return (
     <Link
       href={href}
-      className={`${className}`}
+      className={`py-4 duration-1000 hover:bg-background-100 ${className} ${
+        pathname === href ? "pl-5 border-l-5 border-l-call-100" : ""
+      }`}
       {...props}
       aria-current={pathname === href ? true : false}
     >

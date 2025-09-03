@@ -1,13 +1,14 @@
+import Container from "./Container";
 
-import Container from './Container';
+interface FooterProps {
+  className?: string;
+  children: React.ReactNode | string;
+}
 
-const Footer = () => {
-
+const Footer = ({ className, children, ...props }: FooterProps) => {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <Container>
-        Footer
-      </Container>
+    <footer className={`bg-background-100  ${className}`} {...props}>
+      <Container>{children}</Container>
     </footer>
   );
 };
