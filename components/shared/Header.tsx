@@ -10,11 +10,11 @@ interface HeaderProps {
 const Header = ({ className, ...props }: HeaderProps) => {
   return (
     <header className={`${className}`} {...props}>
-      <Nav>
-        <Logo />
+      <Nav className="px-3 pt-5">
+        <Logo className="block w-fit mx-auto lg:mx-[unset]" />
         <NavLinksList />
       </Nav>
-      <AccountState />
+      {/* <AccountState /> */}
     </header>
   );
 };

@@ -1,11 +1,9 @@
-const Nav = ({
-  className = "",
-  children,
-  ...props
-}: {
+interface NavProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children: React.ReactNode;
-}) => {
+}
+
+const Nav = ({ className = "", children, ...props }: NavProps) => {
   return (
     <nav
       className={`${className ? className : ""}`}

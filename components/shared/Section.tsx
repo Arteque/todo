@@ -1,12 +1,20 @@
-const Section = ({className, children, ...props}:{
-    className?: string;
-    children: React.ReactNode;
+import React from "react";
+
+const Section = ({
+  className,
+  id,
+  children,
+  ...props
+}: {
+  className?: string;
+  id?: string;
+  children: React.ReactNode;
 }) => {
   return (
-    <section className={`${className}`} {...props}>
+    <section className={`${className}`} id={id} {...props}>
       {children}
     </section>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

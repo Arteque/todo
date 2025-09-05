@@ -1,14 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-const Logo = () => {
+
+interface LogoProps extends React.HTMLAttributes<HTMLAnchorElement> {
+  className?: string;
+}
+
+const Logo = ({ className, ...props }: LogoProps) => {
   return (
-    <Link href="/" className="block max-w-[17.25rem] h-auto">
+    <Link href="/" className={`${className}`} {...props}>
       <Image
         alt="Managit Main Logo"
         src="/Shared/Logo/Logo.svg"
         width={276}
         height={61}
-        className="w-full h-auto"
+        className="w-[17.25rem] h-[3.8125rem]"
       />
     </Link>
   );
