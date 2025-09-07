@@ -15,7 +15,9 @@ const Outer = ({
 }: OuterProps) => {
   return (
     <div
-      className={`border-1 rounded-[.5rem] p-4 ${border} ${className}`}
+      className={`border-1 rounded-[0_0_1rem_0] p-4 ${border ? border : ""} ${
+        className ? className : ""
+      }`}
       {...props}
       id={id}
     >
