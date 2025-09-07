@@ -1,7 +1,7 @@
 import Container from "@/components/shared/Container";
 import Section from "@/components/shared/Section";
 import Outer from "@/components/shared/Containers/Outer";
-import { Search } from "lucide-react";
+import Search from "@/components/Forms/Search";
 
 export default function Home() {
   return (

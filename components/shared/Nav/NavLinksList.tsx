@@ -9,12 +9,12 @@ const NavLinksList = () => {
         {LinksList.map((link, index) => (
           <li key={index}>
             <NavLinkItem
-              key={link.href}
-              href={link.href}
+              key={link?.href}
+              href={link?.href}
               className="flex gap-3 items-center justify-center w-fit lg:w-auto"
             >
-              <span className="icon">{link.icon}</span>
-              <span className="text hidden md:inline">{link.label}</span>
+              <span className="icon">{link?.icon}</span>
+              <span className="text hidden md:inline">{link?.label}</span>
             </NavLinkItem>
           </li>
         ))}
